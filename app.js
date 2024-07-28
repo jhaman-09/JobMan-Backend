@@ -7,7 +7,7 @@ import { dbConnection } from './database/dbConnection.js';
 import { errorMiddleware } from './middlewares/error.js';
 
 import userRouter from './routes/userRouter.js'
-// import {} from './routes/jobRouter.js'
+import jobRouter from './routes/jobRouter.js'
 // import {} from './routes/applicationRouter.js'
 
 const app = express();
@@ -35,7 +35,7 @@ app.use(fileUpload({
 
 app.use('/api/v1/user', userRouter);
 // app.use('api/v1/application', applicationRouter);
-// app.use('api/v1/job', jobRouter);
+app.use('/api/v1/job', jobRouter);
 
 dbConnection();
 
