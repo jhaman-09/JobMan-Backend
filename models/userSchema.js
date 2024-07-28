@@ -23,7 +23,8 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, "Please Provide Your password"],
     minLength: [8, "Password must contain at least 8 characters"],
-    maxLength: [30, "Password cannot exceed 30 charaters"],
+    maxLength: [32, "Password cannot exceed 30 charaters"],
+    select : false,
   },
   role: {
     type: String,
@@ -50,12 +51,12 @@ userSchema.pre("save", async function (next) {
 });
 
 // Compare pre store hashed password and enter password
-userSchema.methods.comparePassword = async (enteredPassword) => {
+userSchema.methods.comparePassword = async function(enteredPassword){
   return await bcrypt.compare(enteredPassword, this.password);
 };
 
 // Generating a JWT TOKEN for authorization
-userSchema.methods.getJWTToken = () => {
+userSchema.methods.getJWTToken = function(){
   return jwt.sign({ id: this._id }, process.env.JWT_SECRET_KEY, {
     expiresIn: process.env.JWT_EXPIRE,
   });
