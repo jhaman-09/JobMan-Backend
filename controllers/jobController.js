@@ -1,6 +1,6 @@
 import { catchAsyncError } from "../middlewares/catchAsyncError.js";
 import { Job } from "../models/jobSchema.js";
-import ErrorHandler from "../middlewares/error.js";
+import ErrorHandler, { errorMiddleware } from "../middlewares/error.js";
 import mongoose from "mongoose";
 
 // Job Seeker can watch the availabe jobs
@@ -75,15 +75,12 @@ export const postJob = catchAsyncError(async (req, res, next) => {
     postedBy,
   });
 
-  return res.status(200).json({
+  res.status(200).json({
     success: true,
-    message: "Job Posted Successfully!",
     job,
+    message: "Job Posted Successfully!",
   });
 });
-
-
-
 
 // watch All jobs posted by a Employee
 export const getMyJobs = catchAsyncError(async (req, res, next) => {
@@ -135,9 +132,33 @@ export const updateMyJob = catchAsyncError(async (req, res, next) => {
     useFindAndModify: false,
   });
 
-  return res.status(200).json({
+  res.status(200).json({
     status: true,
-    message: "Job Updated Successfully",
     updatedJob,
+    message: "Job Updated Successfully",
+  });
+});
+
+export const deleteJob = catchAsyncError(async (req, res, next) => {
+  const { role } = req.user;
+  if (role === "Job Seeker") {
+    return next(
+      new ErrorHandler(
+        "Job Seeker are not allowed to access this resource !",
+        400
+      )
+    );
+  }
+
+  const { id } = req.params;
+  let job = await Job.findById(id);
+  if (!job) {
+    return next(new ErrorHandler("Oops, Job not found !", 404));
+  }
+
+  await job.deleteOne();
+  res.status(200).json({
+    success: true,
+    message: "Job Delete Successfully !",
   });
 });
