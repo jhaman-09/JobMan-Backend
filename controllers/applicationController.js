@@ -3,6 +3,7 @@ import { catchAsyncError } from "../middlewares/catchAsyncError.js";
 import ErrorHandler from "../middlewares/error.js";
 import { Application } from "../models/applicationSchema.js";
 import cloudinary from "cloudinary";
+import { Job } from "../models/jobSchema.js";
 
 // Employee get all  his job posted application
 export const employerGetAllApplications = catchAsyncError(
@@ -19,7 +20,9 @@ export const employerGetAllApplications = catchAsyncError(
 
     const id = req.user._id;
 
-    const applications = await Application.find({ "employerId.user": id });
+    const applications = await Application.find({
+      "employerId.user": id,
+    });
 
     if (!applications) {
       return next(new ErrorHandler("Oops, No One has applied yet", 404));
@@ -138,7 +141,7 @@ export const applyForJobApplication = catchAsyncError(
       return next(new ErrorHandler("Job Not Found !", 404));
     }
 
-    const jobDetails = await Application.findById(jobId);
+    const jobDetails = await Job.findById(jobId);
     if (!jobDetails) {
       return next(new ErrorHandler("Job Details Not Found !", 400));
     }
