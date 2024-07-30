@@ -90,6 +90,8 @@ export const jobSeekerDeleteJobApplication = catchAsyncError(
   }
 );
 
+
+
 export const applyForJobApplication = catchAsyncError(
   async (req, res, next) => {
     const { role } = req.user;
