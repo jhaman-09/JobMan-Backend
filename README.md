@@ -2,7 +2,7 @@
 
 ## App.js
 
-- import file like express dotenv cookieparser cors file and set up all of them
+- import file like express dotenv cookieparser cors file and set up all of them..
 
 ## Server.js
 
@@ -10,7 +10,7 @@
 
 ## dbConnection
 
-- stablished database connecction with cloud, or local
+- stablished database connecction with cloud, or local..
 
 ## Config.env
 
@@ -18,15 +18,15 @@
 
 ## Middlewares
 
-- created all the required middleware to handle error
+- created all the required middleware to handle error..
 
 ## Model
 
-- From models for required field
+- Creating Models for Every Work..
 
 ## Controller
 
-- Set up controller for every field
+- Set up controller for every Routes..
 
 # Routes 
 
