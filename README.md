@@ -32,7 +32,7 @@
 
 ## 1) User Routes
 
-> ***Register***
+***Register***
 
 -   http://localhost:4000/api/v1/user/register
 
@@ -82,14 +82,14 @@
 
 
 
-> ***Log Out***
+***Log Out***
 
 -   http://localhost:4000/api/v1/user/logout
 
     - *It will logout According to your login profile as **Employee** or  as **Job Seeker**.*
     - Both Job Seeker and Employee can logout with this route.
 
-> ***Profile***
+***Profile***
 
 -   http://localhost:4000/api/v1/user/profile
 
@@ -103,3 +103,44 @@
 -   http://localhost:4000/api/v1/job/getall
 
     - Both Employee and Job Seeker can get all posted Jobs and its Details
+
+***Post Job***
+
+- http://localhost:4000/api/v1/job/postjob
+
+    - Only Employee Can Able to Post the Job
+    - In this, the job poster can able to give **Range Salary** or **Fixed Salary**
+    - And the minimun salary can have at least **4 digit figure**.
+    - And Maximum Salary cannot have more than **9 digits figure**.
+
+    > *Request Body for Fixed Salary*
+
+        {
+        "title": "Software Developer",
+        "description": "Develop and maintain software",
+        "category": "IT",
+        "country": "USA",
+        "city": "New York",
+        "location": "123, 44-D washington near macD",
+        "fixedSalary": 80000
+        }
+
+    > *Request body for Range Salary*
+
+        {
+        "title": "Software Developer",
+        "description": "Develop and maintain software",
+        "category": "IT",
+        "country": "USA",
+        "city": "New York",
+        "location": "123, 44-D washington near macD",
+        "salaryFrom": 1000,
+        "salaryTo" : 10000
+        }
+
+***My Posted Jobs***
+
+-   http://localhost:4000/api/v1/job/myjobs
+
+    - Get All Posted Job Details By that Employee.
+    - It is only accessable by Employee.
