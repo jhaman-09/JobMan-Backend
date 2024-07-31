@@ -25,7 +25,7 @@ const applicationSchema = mongoose.Schema({
   address: {
     type: String,
     required: [true, "Please Provide your address !"],
-    minLength: [10, "Address must have 30 charactors"],
+    minLength: [10, "Address must have at least 10 charactors"],
   },
   resume: {
     public_id: {
