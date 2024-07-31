@@ -182,6 +182,3 @@ export const applyForJobApplication = catchAsyncError(
     });
   }
 );
-
-
-// Employee Delete his posted job

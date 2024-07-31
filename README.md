@@ -201,6 +201,7 @@
     - For **jobId**, Request to this route http://localhost:4000/api/v1/job/getall.
     - Address must have at least 10 charactors.
     - Porvide a valid Email
+    - Please Uplord Resume in PNG, JPG, or WEBP Formate
 
     ![](/assets/Screenshot%202024-07-31%20110228.png)
 
