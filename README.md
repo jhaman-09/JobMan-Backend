@@ -32,7 +32,7 @@
 
 ## 1) User Routes
 
-***Register***
+> ***Register***
 
 -   http://localhost:4000/api/v1/user/register
 
@@ -58,7 +58,7 @@
             "password" : "Xyz@1234"
             }
 
-***Login***
+> ***Login***
 
 -   http://localhost:4000/api/v1/user/login
 
@@ -82,14 +82,14 @@
 
 
 
-***Log Out***
+> ***Log Out***
 
 -   http://localhost:4000/api/v1/user/logout
 
     - *It will logout According to your login profile as **Employee** or  as **Job Seeker**.*
     - Both Job Seeker and Employee can logout with this route.
 
-***Profile***
+> ***Profile***
 
 -   http://localhost:4000/api/v1/user/profile
 
