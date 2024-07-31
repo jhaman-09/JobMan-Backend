@@ -32,7 +32,7 @@
 
 ## 1) User Routes
 
-***Register***
+***🚀 Register 🚀***
 
 -   http://localhost:4000/api/v1/user/register
 
@@ -58,7 +58,7 @@
             "password" : "Xyz@1234"
             }
 
-***Login***
+***🚀 Login 🚀***
 
 -   http://localhost:4000/api/v1/user/login
 
@@ -82,14 +82,14 @@
 
 
 
-***Log Out***
+***🚀 Log Out 🚀***
 
 -   http://localhost:4000/api/v1/user/logout
 
     - *It will logout According to your login profile as **Employee** or  as **Job Seeker**.*
     - Both Job Seeker and Employee can logout with this route.
 
-***Profile***
+***🚀 Profile 🚀***
 
 -   http://localhost:4000/api/v1/user/profile
 
@@ -98,13 +98,13 @@
 
 ## 2) Job Routes
 
-***Get All Jobs***
+***🚀 Get All Jobs 🚀***
 
 -   http://localhost:4000/api/v1/job/getall
 
     - Both Employee and Job Seeker can get all posted Jobs and its Details
 
-***Post Job***
+***🚀 Post Job 🚀***
 
 - http://localhost:4000/api/v1/job/postjob
 
@@ -139,14 +139,14 @@
             "salaryTo" : 10000
             }
 
-***My Posted Jobs***
+***🚀 My Posted Jobs 🚀***
 
 -   http://localhost:4000/api/v1/job/myjobs
 
     - Get All Posted Job Details By that Employee.
     - It is only accessable by Employee.
 
-***Update Posted Job***
+***🚀 Update Posted Job 🚀***
 
 -   http://localhost:4000/api/v1/job/update/_id
     > Example : http://localhost:4000/api/v1/job/update/66a8b8ec41c2f9630f05399a
@@ -162,7 +162,7 @@
                 "title" : "Desiginer"
             }
 
-***Delete Posted Job***
+***🚀 Delete Posted Job 🚀***
 
 -   http://localhost:4000/api/v1/job/delete/_id
     > Example : http://localhost:4000/api/v1/job/delete/66a8b8ec41c2f9630f05399a
@@ -174,7 +174,7 @@
 
 ## 3) Application Routes
 
-***Employee Get All Job Applications Request***
+***🚀 Employee Get All Job Applications Request 🚀***
 
 -   http://localhost:4000/api/v1/application/employee/getall
 
@@ -182,7 +182,7 @@
     - here, Employee can watch all the job request application on his posted job
     - To accessing this route, Employee must need to login first😎.
 
-***Job Seeker Get All his Applied Job details***
+***🚀 Job Seeker Get All his Applied Job details 🚀***
 
 -   http://localhost:4000/api/v1/application/jobseeker/getall
     
@@ -190,7 +190,7 @@
     - Here, Job Seeker can take a look to all his applied job requests
     - To access this route, Job Seeker must need to login first👍. 
 
-***Job Seeker Apply for a Job***
+***🚀 Job Seeker Apply for a Job 🚀***
 
 -   http://localhost:4000/api/v1/application/jobseeker/post
 
@@ -206,7 +206,7 @@
     ![](/assets/Screenshot%202024-07-31%20110228.png)
 
 
-***Job Seeker Delete His Applied Job***
+***🚀 Job Seeker Delete His Applied Job 🚀***
 
 -   http://localhost:4000/api/v1/application/jobseeker/delete/_id
 
