@@ -1,5 +1,5 @@
-import app from "./app.js"
-import cloudinary from 'cloudinary'
+import app from "./app.js";
+import cloudinary from "cloudinary";
 
 cloudinary.v2.config({
   cloud_name: process.env.CLOUDINARY_CLIENT_NAME,
@@ -7,7 +7,6 @@ cloudinary.v2.config({
   api_secret: process.env.CLOUDINARY_CLIENT_SECRET,
 });
 
-
-app.listen(process.env.PORT, () => {
-    console.log(`Server is running on port ${process.env.PORT}`);
-});
+ app.listen(process.env.PORT || 8000, () => {
+   console.log(`Server is Running at port : ${process.env.PORT}`);
+ });
