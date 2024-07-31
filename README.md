@@ -32,58 +32,74 @@
 
 ## 1) User Routes
 
-***Job Seeker or Employee Register***
+***Register***
 
-- http://localhost:4000/api/v1/user/register
+-   http://localhost:4000/api/v1/user/register
 
-    *Employee Register :*
-    
-        {
-        "name" : "xyz zyx",
-        "email" : "employee@gmail.com",
-        "phone" : 11223344,
-        "role" : "Employee",
-        "password" : "Xyz@1234"
-        }
+    - Both Job Seeker and Emplyee can register by thier details
 
-    *Job Seeker Register :*
+        *Employee Register :*
+        
+            {
+            "name" : "xyz zyx",
+            "email" : "employee@gmail.com",
+            "phone" : 11223344,
+            "role" : "Employee",
+            "password" : "Xyz@1234"
+            }
 
-        {
-        "name" : "xyz zyx",
-        "email" : "jobseeker@gmail.com",
-        "phone" : 11223344,
-        "role" : "Job Seeker",
-        "password" : "Xyz@1234"
-        }
+        *Job Seeker Register :*
 
-***Job Seeker or  Employee Login***
+            {
+            "name" : "xyz zyx",
+            "email" : "jobseeker@gmail.com",
+            "phone" : 11223344,
+            "role" : "Job Seeker",
+            "password" : "Xyz@1234"
+            }
 
-- http://localhost:4000/api/v1/user/login
+***Login***
 
-    *Employee Login :* 
+-   http://localhost:4000/api/v1/user/login
 
-        {
-        "email" : "employee@gmail.com",
-        "password" : "Xyz@1234",
-        "role" : "Employee"
-        }
+    - Employee and Job Seeker can login to put their login deatils in the body request.
 
-    *Job Seeker Login :*
+        *Employee Login :* 
 
-        {
-        "email" : "jobseeker@gmail.com",
-        "password" : "Xyz@1234",
-        "role" : "Job Seeker"
-        }
+            {
+            "email" : "employee@gmail.com",
+            "password" : "Xyz@1234",
+            "role" : "Employee"
+            }
+
+        *Job Seeker Login :*
+
+            {
+            "email" : "jobseeker@gmail.com",
+            "password" : "Xyz@1234",
+            "role" : "Job Seeker"
+            }
 
 
 
-***Job Seeker Or Employee Log Out***
+***Log Out***
 
 -   http://localhost:4000/api/v1/user/logout
 
-    *It will logout According to your login profile as **Employee** or  as **Job Seeker**.*
+    - *It will logout According to your login profile as **Employee** or  as **Job Seeker**.*
+    - Both Job Seeker and Employee can logout with this route.
 
-***Job Seeker or Employee Get their Profile Details***
+***Profile***
 
 -   http://localhost:4000/api/v1/user/profile
+
+    - Both Employee and Job Seeker can get Their Profile
+
+
+## 2) Job Routes
+
+***Get All Jobs***
+
+-   http://localhost:4000/api/v1/job/getall
+
+    - Both Employee and Job Seeker can get all posted Jobs and its Details
