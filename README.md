@@ -38,7 +38,7 @@
 
     - Both Job Seeker and Emplyee can register by thier details
 
-        *Employee Register :*
+        > *Employee Register :*
         
             {
             "name" : "xyz zyx",
@@ -48,7 +48,7 @@
             "password" : "Xyz@1234"
             }
 
-        *Job Seeker Register :*
+        > *Job Seeker Register :*
 
             {
             "name" : "xyz zyx",
@@ -58,13 +58,13 @@
             "password" : "Xyz@1234"
             }
 
-> ***Login***
+***Login***
 
 -   http://localhost:4000/api/v1/user/login
 
     - Employee and Job Seeker can login to put their login deatils in the body request.
 
-        *Employee Login :* 
+        > *Employee Login :* 
 
             {
             "email" : "employee@gmail.com",
@@ -72,7 +72,7 @@
             "role" : "Employee"
             }
 
-        *Job Seeker Login :*
+        > *Job Seeker Login :*
 
             {
             "email" : "jobseeker@gmail.com",
