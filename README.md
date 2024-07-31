@@ -28,9 +28,9 @@
 
 - Set up controller for every field
 
-> # Routes 
+# Routes 
 
-### 1) User Routes
+## 1) User Routes
 
 ***Job Seeker or Employee Register***
 
