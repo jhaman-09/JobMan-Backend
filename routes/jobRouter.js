@@ -7,7 +7,7 @@ const router = express.Router();
 router.get("/getall", getAllJobs);
 router.post("/postjob", isAuthorized, postJob);
 router.get("/myjobs", isAuthorized, getMyJobs);
-router.put("/updatejob/:abcd", isAuthorized, updateMyJob);
-router.delete("/deletejob/:id", isAuthorized, deleteJob)
+router.put("/update/:abcd", isAuthorized, updateMyJob);
+router.delete("/delete/:id", isAuthorized, deleteJob)
 
 export default router; 

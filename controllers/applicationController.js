@@ -24,10 +24,6 @@ export const employerGetAllApplications = catchAsyncError(
       "employerId.user": id,
     });
 
-    if (!applications) {
-      return next(new ErrorHandler("Oops, No One has applied yet", 404));
-    }
-
     res.status(200).json({
       success: true,
       message: "Applications found successfully !",
@@ -35,6 +31,8 @@ export const employerGetAllApplications = catchAsyncError(
     });
   }
 );
+
+
 
 // Job seeker get all his applied job applications
 export const JobSeekerGetAllApplications = catchAsyncError(
@@ -52,12 +50,6 @@ export const JobSeekerGetAllApplications = catchAsyncError(
     const id = req.user._id;
     const applications = await Application.find({ "applicantId.user": id });
 
-    if (!applications) {
-      return next(
-        new ErrorHandler("Your have not yet applied for any job", 404)
-      );
-    }
-
     res.status(200).json({
       success: true,
       message: "Applied Applications Found Successfully",
@@ -65,6 +57,8 @@ export const JobSeekerGetAllApplications = catchAsyncError(
     });
   }
 );
+
+
 
 // Job seeker delete his applied job application
 export const jobSeekerDeleteJobApplication = catchAsyncError(
@@ -92,6 +86,7 @@ export const jobSeekerDeleteJobApplication = catchAsyncError(
 
 
 
+// Job Seeker Applied for a job 
 export const applyForJobApplication = catchAsyncError(
   async (req, res, next) => {
     const { role } = req.user;
@@ -187,3 +182,6 @@ export const applyForJobApplication = catchAsyncError(
     });
   }
 );
+
+
+// Employee Delete his posted job

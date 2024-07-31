@@ -32,6 +32,8 @@ export const register = catchAsyncError(async (req, res, next) => {
   sendToken(user, 200, res, "User Registered Successfully!");
 });
 
+
+
 export const login = catchAsyncError(async (req, res, next) => {
   const { email, password, role } = req.body;
   if (!email || !password || !role) {
@@ -72,3 +74,20 @@ export const logout = catchAsyncError(async (req, res, next) => {
       message: "User Logout Successfully !",
     });
 });
+
+
+
+// Profile of Login User
+export const getUser = catchAsyncError(async (req, res, next) => {
+  const user = req.user;
+
+  if (!user) {
+    return next(new ErrorHandler("Login User Not Found !", 404));
+  }
+
+  return res.status(200).json({
+    message: "Found User Profile Details Successfully !",
+    user,
+    success: true
+  })
+})
