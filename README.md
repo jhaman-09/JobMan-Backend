@@ -172,5 +172,45 @@
     - for **_id**, request **http://localhost:4000/api/v1/job/myjobs**
 
 
-## #) Application Routes
+## 3) Application Routes
 
+***Employee Get All Job Applications Request***
+
+-   http://localhost:4000/api/v1/application/employee/getall
+
+    - Again, this field is only accessable by the employee.
+    - here, Employee can watch all the job request application on his posted job
+    - To accessing this route, Employee must need to login first😎.
+
+***Job Seeker Get All his Applied Job details***
+
+-   http://localhost:4000/api/v1/application/jobseeker/getall
+    
+    - This routes is only accessable by the Job Seeker.
+    - Here, Job Seeker can take a look to all his applied job requests
+    - To access this route, Job Seeker must need to login first👍. 
+
+***Job Seeker Apply for a Job***
+
+-   http://localhost:4000/api/v1/application/jobseeker/post
+
+    - This route is only accessable by the Job Seeker.
+    - Here, Job Seeker able to applied this the job which he want to apply.
+    - To applied for a job Job Seeker need : **name, email, coverLetter, phone, address, resume, jobId**.
+    - Here, **jobId** is that for which job, The Job Seeker is applying.
+    - For **jobId**, Request to this route ***http://localhost:4000/api/v1/job/getall***.
+    - Address must have at least 10 charactors.
+    - Porvide a valid Email
+
+    ![](/assets/Screenshot%202024-07-31%20110228.png)
+
+
+***Job Seeker Delete His Applied Job***
+
+-   http://localhost:4000/api/v1/application/jobseeker/delete/_id
+
+    - Again, This route is only accessable by the job seeker.
+    - Here, The Job seeker can able to delete his applied job application.
+    - for ***_id*** : request to this route, http://localhost:4000/api/v1/application/jobseeker/getall
+    - Put the value of ***_id*** of that job, You want delete application.
+    - To perform this route, You Need first to login as ***Job Seeker***
