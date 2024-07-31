@@ -198,7 +198,7 @@
     - Here, Job Seeker able to applied this the job which he want to apply.
     - To applied for a job Job Seeker need : **name, email, coverLetter, phone, address, resume, jobId**.
     - Here, **jobId** is that for which job, The Job Seeker is applying.
-    - For **jobId**, Request to this route ***http://localhost:4000/api/v1/job/getall***.
+    - For **jobId**, Request to this route **http://localhost:4000/api/v1/job/getall*.
     - Address must have at least 10 charactors.
     - Porvide a valid Email
 
@@ -207,10 +207,10 @@
 
 ***Job Seeker Delete His Applied Job***
 
--   http://localhost:4000/api/v1/application/jobseeker/delete/_id
+-   *http://localhost:4000/api/v1/application/jobseeker/delete/_id*
 
     - Again, This route is only accessable by the job seeker.
     - Here, The Job seeker can able to delete his applied job application.
-    - for ***_id*** : request to this route, http://localhost:4000/api/v1/application/jobseeker/getall
+    - for ***_id*** : request to this route, *http://localhost:4000/api/v1/application/jobseeker/getall*
     - Put the value of ***_id*** of that job, You want delete application.
     - To perform this route, You Need first to login as ***Job Seeker***
