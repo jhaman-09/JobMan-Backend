@@ -113,30 +113,31 @@
     - And the minimun salary can have at least **4 digit figure**.
     - And Maximum Salary cannot have more than **9 digits figure**.
 
-    > *Request Body for Fixed Salary*
 
-        {
-        "title": "Software Developer",
-        "description": "Develop and maintain software",
-        "category": "IT",
-        "country": "USA",
-        "city": "New York",
-        "location": "123, 44-D washington near macD",
-        "fixedSalary": 80000
-        }
+        > *Request Body for Fixed Salary*
 
-    > *Request body for Range Salary*
+            {
+            "title": "Software Developer",
+            "description": "Develop and maintain software",
+            "category": "IT",
+            "country": "USA",
+            "city": "New York",
+            "location": "123, 44-D washington near macD",
+            "fixedSalary": 80000
+            }
 
-        {
-        "title": "Software Developer",
-        "description": "Develop and maintain software",
-        "category": "IT",
-        "country": "USA",
-        "city": "New York",
-        "location": "123, 44-D washington near macD",
-        "salaryFrom": 1000,
-        "salaryTo" : 10000
-        }
+        > *Request body for Range Salary*
+
+            {
+            "title": "Software Developer",
+            "description": "Develop and maintain software",
+            "category": "IT",
+            "country": "USA",
+            "city": "New York",
+            "location": "123, 44-D washington near macD",
+            "salaryFrom": 1000,
+            "salaryTo" : 10000
+            }
 
 ***My Posted Jobs***
 
@@ -144,3 +145,32 @@
 
     - Get All Posted Job Details By that Employee.
     - It is only accessable by Employee.
+
+***Update Posted Job***
+
+-   http://localhost:4000/api/v1/job/update/_id
+    > Example : http://localhost:4000/api/v1/job/update/66a8b8ec41c2f9630f05399a
+
+    - The employee who was posted this job only able to perform updatation.
+    - Job Seeker are not able to access this resource.
+    - At place of _id, you need to put **your job _id**
+    - for **_id**, request **http://localhost:4000/api/v1/job/myjobs**
+
+        > *Request body for updation*
+
+            {
+                "title" : "Desiginer"
+            }
+
+***Delete Posted Job***
+
+-   http://localhost:4000/api/v1/job/delete/_id
+    > Example : http://localhost:4000/api/v1/job/delete/66a8b8ec41c2f9630f05399a
+
+    - Again thin Route is only accessable by the Employee who was posted any job.
+    - He can delete his posted job, by providing his job **_id**
+    - for **_id**, request **http://localhost:4000/api/v1/job/myjobs**
+
+
+## #) Application Routes
+
