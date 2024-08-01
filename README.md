@@ -149,7 +149,7 @@
 ***🚀 Update Posted Job 🚀***
 
 -   https://jobman-ve25.onrender.com/api/v1/job/update/_id
-    > Example : http://localhost:4000/api/v1/job/update/66a8b8ec41c2f9630f05399a
+    > Example : https://jobman-ve25.onrender.com/api/v1/job/update/66a8b8ec41c2f9630f05399a
 
     - The employee who was posted this job only able to perform updatation.
     - Job Seeker are not able to access this resource.
@@ -165,7 +165,7 @@
 ***🚀 Delete Posted Job 🚀***
 
 -   https://jobman-ve25.onrender.com/api/v1/job/delete/_id
-    > Example : http://localhost:4000/api/v1/job/delete/66a8b8ec41c2f9630f05399a
+    > Example : https://jobman-ve25.onrender.com/api/v1/job/delete/66a8b8ec41c2f9630f05399a
 
     - Again thin Route is only accessable by the Employee who was posted any job.
     - He can delete his posted job, by providing his job **_id**
