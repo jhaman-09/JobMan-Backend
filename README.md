@@ -34,7 +34,7 @@
 
 ***🚀 Register 🚀***
 
--   http://localhost:4000/api/v1/user/register
+-   https://jobman-ve25.onrender.com/api/v1/user/register
 
     - Both Job Seeker and Emplyee can register by thier details
 
@@ -60,7 +60,7 @@
 
 ***🚀 Login 🚀***
 
--   http://localhost:4000/api/v1/user/login
+-   https://jobman-ve25.onrender.com/api/v1/user/login
 
     - Employee and Job Seeker can login to put their login deatils in the body request.
 
@@ -84,14 +84,14 @@
 
 ***🚀 Log Out 🚀***
 
--   http://localhost:4000/api/v1/user/logout
+-   https://jobman-ve25.onrender.com/api/v1/user/logout
 
     - *It will logout According to your login profile as **Employee** or  as **Job Seeker**.*
     - Both Job Seeker and Employee can logout with this route.
 
 ***🚀 Profile 🚀***
 
--   http://localhost:4000/api/v1/user/profile
+-   https://jobman-ve25.onrender.com/api/v1/user/profile
 
     - Both Employee and Job Seeker can get Their Profile
 
@@ -100,13 +100,13 @@
 
 ***🚀 Get All Jobs 🚀***
 
--   http://localhost:4000/api/v1/job/getall
+-   https://jobman-ve25.onrender.com/api/v1/job/getall
 
     - Both Employee and Job Seeker can get all posted Jobs and its Details
 
 ***🚀 Post Job 🚀***
 
-- http://localhost:4000/api/v1/job/postjob
+- https://jobman-ve25.onrender.com/api/v1/job/postjob
 
     - Only Employee Can Able to Post the Job
     - In this, the job poster can able to give **Range Salary** or **Fixed Salary**
@@ -141,20 +141,20 @@
 
 ***🚀 My Posted Jobs 🚀***
 
--   http://localhost:4000/api/v1/job/myjobs
+-   https://jobman-ve25.onrender.com/api/v1/job/myjobs
 
     - Get All Posted Job Details By that Employee.
     - It is only accessable by Employee.
 
 ***🚀 Update Posted Job 🚀***
 
--   http://localhost:4000/api/v1/job/update/_id
+-   https://jobman-ve25.onrender.com/api/v1/job/update/_id
     > Example : http://localhost:4000/api/v1/job/update/66a8b8ec41c2f9630f05399a
 
     - The employee who was posted this job only able to perform updatation.
     - Job Seeker are not able to access this resource.
     - At place of _id, you need to put **your job _id**
-    - for **_id**, request http://localhost:4000/api/v1/job/myjobs
+    - for **_id**, request https://jobman-ve25.onrender.com/api/v1/job/myjobs
 
         > *Request body for updation*
 
@@ -164,19 +164,19 @@
 
 ***🚀 Delete Posted Job 🚀***
 
--   http://localhost:4000/api/v1/job/delete/_id
+-   https://jobman-ve25.onrender.com/api/v1/job/delete/_id
     > Example : http://localhost:4000/api/v1/job/delete/66a8b8ec41c2f9630f05399a
 
     - Again thin Route is only accessable by the Employee who was posted any job.
     - He can delete his posted job, by providing his job **_id**
-    - for **_id**, request http://localhost:4000/api/v1/job/myjobs
+    - for **_id**, request https://jobman-ve25.onrender.com/api/v1/job/myjobs
 
 
 ## 3) Application Routes
 
 ***🚀 Employee Get All Job Applications Request 🚀***
 
--   http://localhost:4000/api/v1/application/employee/getall
+-   https://jobman-ve25.onrender.com/api/v1/application/employee/getall
 
     - Again, this field is only accessable by the employee.
     - here, Employee can watch all the job request application on his posted job
@@ -184,7 +184,7 @@
 
 ***🚀 Job Seeker Get All his Applied Job details 🚀***
 
--   http://localhost:4000/api/v1/application/jobseeker/getall
+-   https://jobman-ve25.onrender.com/api/v1/application/jobseeker/getall
     
     - This routes is only accessable by the Job Seeker.
     - Here, Job Seeker can take a look to all his applied job requests
@@ -192,13 +192,13 @@
 
 ***🚀 Job Seeker Apply for a Job 🚀***
 
--   http://localhost:4000/api/v1/application/jobseeker/post
+-   https://jobman-ve25.onrender.com/api/v1/application/jobseeker/post
 
     - This route is only accessable by the Job Seeker.
     - Here, Job Seeker able to applied this the job which he want to apply.
     - To applied for a job Job Seeker need : **name, email, coverLetter, phone, address, resume, jobId**.
     - Here, **jobId** is that for which job, The Job Seeker is applying.
-    - For **jobId**, Request to this route http://localhost:4000/api/v1/job/getall.
+    - For **jobId**, Request to this route https://jobman-ve25.onrender.com/api/v1/job/getall.
     - Address must have at least 10 charactors.
     - Porvide a valid Email
     - Please Uplord Resume in PNG, JPG, or WEBP Formate
@@ -208,10 +208,10 @@
 
 ***🚀 Job Seeker Delete His Applied Job 🚀***
 
--   http://localhost:4000/api/v1/application/jobseeker/delete/_id
+-   https://jobman-ve25.onrender.com/api/v1/application/jobseeker/delete/_id
 
     - Again, This route is only accessable by the job seeker.
     - Here, The Job seeker can able to delete his applied job application.
-    - for ***_id*** : request to this route, http://localhost:4000/api/v1/application/jobseeker/getall
+    - for ***_id*** : request to this route, https://jobman-ve25.onrender.com/api/v1/application/jobseeker/getall
     - Put the value of ***_id*** of that job, You want delete application.
     - To perform this route, You Need first to login as ***Job Seeker***
