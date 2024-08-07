@@ -164,7 +164,7 @@ export const deleteJob = catchAsyncError(async (req, res, next) => {
 });
 
 export const singleJobDetails = catchAsyncError(async (req, res, next) => {
-  const id = req.params;
+  const { id } = req.params;
   try {
     const job = await Job.findById(id);
 
