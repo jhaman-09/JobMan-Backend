@@ -172,6 +172,17 @@
     - for **_id**, request https://jobman-ve25.onrender.com/api/v1/job/myjobs
 
 
+***🚀 Single Job Details 🚀***
+
+-   https://jobman-ve25.onrender.com/api/v1/job/_id
+    > Example : https://jobman-ve25.onrender.com/api/v1/job/66a8b8ec41c2f9630f05399a
+
+    - for **_id**, request https://jobman-ve25.onrender.com/api/v1/job/myjobs
+    - With help _id, we can find the job Details..
+
+
+
+
 ## 3) Application Routes
 
 ***🚀 Employee Get All Job Applications Request 🚀***
