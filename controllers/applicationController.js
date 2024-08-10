@@ -60,7 +60,7 @@ export const JobSeekerGetAllApplications = catchAsyncError(
 
 
 
-// Job seeker delete his applied job application
+// Job seeker delete his applied job application..
 export const jobSeekerDeleteJobApplication = catchAsyncError(
   async (req, res, next) => {
     const { role } = req.user;
@@ -86,7 +86,7 @@ export const jobSeekerDeleteJobApplication = catchAsyncError(
 
 
 
-// Job Seeker Applied for a job 
+// Job Seeker Applied for a job...
 export const applyForJobApplication = catchAsyncError(
   async (req, res, next) => {
     const { role } = req.user;

@@ -12,7 +12,7 @@ export const getAllJobs = catchAsyncError(async (req, res, next) => {
   });
 });
 
-// Employee can only able to post job
+// Employee can only able to post job..
 export const postJob = catchAsyncError(async (req, res, next) => {
   const { role } = req.user;
   if (role === "Job Seeker") {
