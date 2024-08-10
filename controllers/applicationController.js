@@ -104,7 +104,7 @@ export const applyForJobApplication = catchAsyncError(
     }
 
     const { resume } = req.files;
-    const allowedFormats = ["image/png", "image/webp", "image/jpg"];
+    const allowedFormats = ["image/png", "image/webp", "image/jpeg"];
     if (!allowedFormats.includes(resume.mimetype)) {
       return next(
         new ErrorHandler(
