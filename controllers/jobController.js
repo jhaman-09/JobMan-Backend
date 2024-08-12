@@ -114,7 +114,6 @@ export const updateMyJob = catchAsyncError(async (req, res, next) => {
 
   // here, abcd is Object id to which job has to be updated
   const { abcd } = req.params;
-  console.log(abcd);
 
   // Validate ObjectId
   if (!mongoose.Types.ObjectId.isValid(abcd)) {
